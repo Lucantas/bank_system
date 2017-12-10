@@ -1,14 +1,22 @@
 #This is a ATM project, simulating the interations with a bank and a client, to create your bank account give us a call : 0800 not
 from conta import Conta
 
-conta_1 = Conta(1,1000,"Lucas")
-conta_2 = Conta(2,10,"Monique")
+contas = []
 
+def cria_conta(Conta, contas):
+    def agrupa_contas(Conta, contas):
+        contas.append(Conta)
 
-conta_1.transfere(500,conta_2)
+    agrupa_contas(Conta, contas)
 
-print("O saldo da conta do(a) {} é {} ".format(conta_2.Titular, conta_2.Saldo()))
-print("O saldo da conta do(a) {} é {} ".format(conta_1.Titular, conta_1.Saldo()))
+cria_conta(Conta(1,1000,"Lucas"), contas)
+cria_conta(Conta(2,2000, "Monique"), contas)
+
+contas[0].deposita(600)
+contas[0].transfere(500,contas[1])
+
+print("O saldo da conta do(a) {} é {} ".format(contas[1].Titular, contas[1].Saldo()))
+print("O saldo da conta do(a) {} é {} ".format(contas[0].Titular, contas[0].Saldo()))
 
 
 
