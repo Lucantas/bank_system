@@ -7,10 +7,10 @@ class Conta:
         self.__titular = Cliente(titular)
 
     def saca(self,valor):
-        self.saldo -= valor
+        self.__saldo -= valor
 
     def deposita(self, valor):
-        self.saldo += valor
+        self.__saldo += valor
 
     def transfere(self, valor, destino):
         self.saca(valor)
