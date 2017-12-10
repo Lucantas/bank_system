@@ -7,15 +7,21 @@ class Conta:
         self.__titular = Cliente(titular)
 
     def saca(self,valor):
-        self.__saldo -= valor
+        if(self.__saldo >= valor and valor > 0):
+            self.__saldo -= valor
+            return True
+        else:
+            print("Saldo Insuficiente!")
+            return False        
 
     def deposita(self, valor):
         self.__saldo += valor
 
     def transfere(self, valor, destino):
-        self.saca(valor)
-        destino.deposita(valor)
-
+        valor_a_autorizar = self.saca(valor)
+        if (valor_a_autorizar == True):
+            destino.deposita(valor)
+                   
     def Saldo(self):
         return self.__saldo
 
