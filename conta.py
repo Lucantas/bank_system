@@ -5,7 +5,6 @@ class Conta:
         self.__numero = numero
         self.__saldo = saldo
         self.__titular = Cliente(titular)
-        self.nome_titular = self.__titular.nome
 
     def saca(self,valor):
         if(self.__saldo >= valor and valor > 0):
@@ -22,10 +21,12 @@ class Conta:
         valor_a_autorizar = self.saca(valor)
         if (valor_a_autorizar == True):
             destino.deposita(valor)
-                   
-    def Saldo(self):
+
+    @property           
+    def saldo(self):
         return self.__saldo
 
-    def Titular(self):
-        return self.__titular.mostra_nome()
+    @property
+    def titular(self):
+        return self.__titular.nome
 
