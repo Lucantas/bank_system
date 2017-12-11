@@ -16,8 +16,8 @@ contas[0].deposita(600)
 contas[0].transfere(500,contas[1])
 
 
-print("O saldo da conta do(a) {} é {} ".format(contas[1].nome_titular, contas[1].Saldo()))
-print("O saldo da conta do(a) {} é {} ".format(contas[0].nome_titular, contas[0].Saldo()))
+print("O saldo da conta do(a) {} é {} ".format(contas[1].titular, contas[1].saldo))
+print("O saldo da conta do(a) {} é {} ".format(contas[0].titular, contas[0].saldo))
 
 
 
