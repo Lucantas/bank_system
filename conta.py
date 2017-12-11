@@ -1,10 +1,11 @@
 from cliente import Cliente
 
 class Conta:
-    def __init__(self, numero, saldo, titular):
+    def __init__(self, numero, saldo, titular, limite):
         self.__numero = numero
         self.__saldo = saldo
         self.__titular = Cliente(titular)
+        self.__limite = limite
 
     def saca(self,valor):
         if(self.__saldo >= valor and valor > 0):
@@ -21,6 +22,14 @@ class Conta:
         valor_a_autorizar = self.saca(valor)
         if (valor_a_autorizar == True):
             destino.deposita(valor)
+
+    @property
+    def limite(self):
+        return self.__limite
+
+    @limite.setter
+    def limite(self, limite):
+        self.__limite = limite
 
     @property           
     def saldo(self):
