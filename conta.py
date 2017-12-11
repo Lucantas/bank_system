@@ -5,6 +5,7 @@ class Conta:
         self.__numero = numero
         self.__saldo = saldo
         self.__titular = Cliente(titular)
+        self.nome_titular = self.__titular.nome
 
     def saca(self,valor):
         if(self.__saldo >= valor and valor > 0):
@@ -26,5 +27,5 @@ class Conta:
         return self.__saldo
 
     def Titular(self):
-        return self.__titular
+        return self.__titular.mostra_nome()
 
