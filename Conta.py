@@ -23,6 +23,8 @@ class Conta:
         if (valor_a_autorizar == True):
             destino.deposita(valor)
 
+    def extrato(self):
+        print("Olá sr.(a) {}, o seu saldo atual é: R$ {}".format(self.titular, self.saldo))
     @property
     def limite(self):
         return self.__limite
