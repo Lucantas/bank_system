@@ -1,4 +1,4 @@
-from cliente import Cliente
+from Cliente import Cliente
 
 class Conta:
     def __init__(self, numero, saldo, titular, limite):
@@ -39,3 +39,6 @@ class Conta:
     def titular(self):
         return self.__titular.nome
 
+    @staticmethod
+    def codigo_banco():
+        return "001"
