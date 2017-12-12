@@ -18,10 +18,5 @@ contas[0].transfere(500,contas[1])
 
 contas[0].limite = 10000
 
-#print("O saldo da conta do(a) {} é {} ".format(contas[1].titular, contas[1].saldo))
-#print("O saldo da conta do(a) {} é {} ".format(contas[0].titular, contas[0].saldo))
-
-print("O saldo da conta da {} é {}".format(contas[1].titular, contas[1].saldo))
-print("O limite da conta do {} é: {} no banco com o código {}.".format(contas[0].titular, contas[0].limite, contas[0].codigo_banco()))
-
+contas[1].extrato()
 

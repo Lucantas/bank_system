@@ -6,6 +6,7 @@ class Conta:
         self.__saldo = saldo
         self.__titular = Cliente(titular)
         self.__limite = limite
+        
 
     def saca(self,valor):
         if(self.__saldo >= valor and valor > 0):
@@ -25,6 +26,11 @@ class Conta:
 
     def extrato(self):
         print("Olá sr.(a) {}, o seu saldo atual é: R$ {}".format(self.titular, self.saldo))
+    
+    def historico(self):
+        #Method to show accounts history, to be implemented
+        pass
+
     @property
     def limite(self):
         return self.__limite
