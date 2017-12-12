@@ -20,3 +20,6 @@ contas[0].limite = 10000
 
 contas[1].extrato()
 
+print(contas[0].saldo_absoluto)
+
+
