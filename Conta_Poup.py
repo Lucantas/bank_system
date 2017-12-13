@@ -6,8 +6,8 @@ class Conta_Poup(Conta):
         super().__init__(numero, saldo, titular, limite)
 
     def saca(self,valor):
-        if(self.__valida_saque(valor)):
-            self.__saldo -= (valor - 0.01) 
+        if(self._saldo >= valor):
+            self._saldo -= (valor + 0.01) 
             return True
         else:
             print("Saldo Insuficiente!")

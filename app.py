@@ -13,7 +13,7 @@ def cria_conta(Conta, contas):
 cria_conta(Conta(1,50,"Lucas",100), contas)
 cria_conta(Conta_Poup(2,2000, "Monique",5000), contas)
 
-contas[0].transfere(200,contas[1])
+contas[1].transfere(500,contas[0])
 
 contas[0].extrato()
 contas[1].extrato()

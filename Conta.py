@@ -2,26 +2,26 @@ from Cliente import Cliente
 
 class Conta:
     def __init__(self, numero, saldo, titular, limite):
-        self.__numero = numero
-        self.__saldo = saldo
-        self.__titular = Cliente(titular)
-        self.__limite = limite
+        self._numero = numero
+        self._saldo = saldo
+        self._titular = Cliente(titular)
+        self._limite = limite
 
     @property
     def saldo_absoluto(self):
-        return self.__saldo + self.__limite
+        return self._saldo + self._limite
         
     def saca(self,valor):
         if(self.saldo >= valor):
-            self.__saldo -= valor
+            self._saldo -= valor
         else:
             print("Saldo Insuficiente!")
 
     def deposita(self, valor):
-        self.__saldo += valor
+        self._saldo += valor
 
     def transfere(self, valor, destino):
-        if (self.saca(valor)):
+        if (self.saca(valor) and valor <= 500):
             destino.deposita(valor)
 
     def extrato(self):
@@ -41,11 +41,11 @@ class Conta:
 
     @property           
     def saldo(self):
-        return self.__saldo
+        return self._saldo
 
     @property
     def titular(self):
-        return self.__titular.nome
+        return self._titular.nome
 
     @staticmethod
     def codigo_banco():
