@@ -10,16 +10,14 @@ def cria_conta(Conta, contas):
 
     agrupa_contas(Conta, contas)
 
-cria_conta(Conta(1,1000,"Lucas",5000), contas)
+cria_conta(Conta(1,50,"Lucas",100), contas)
 cria_conta(Conta_Poup(2,2000, "Monique",5000), contas)
 
-contas[0].deposita(600)
-contas[0].transfere(500,contas[1])
+contas[0].transfere(200,contas[1])
 
-contas[0].limite = 10000
-
+contas[0].extrato()
 contas[1].extrato()
 
-print(contas[0].saldo_absoluto)
+
 
 

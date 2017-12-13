@@ -11,19 +11,11 @@ class Conta:
     def saldo_absoluto(self):
         return self.__saldo + self.__limite
         
-    def __valida_saque(self, valor):
-        if(self.saldo_absoluto < valor and valor < 0):
-            return False
-        else:
-            return True
-
     def saca(self,valor):
-        if(self.__valida_saque(valor)):
+        if(self.saldo >= valor):
             self.__saldo -= valor
-            return True
         else:
             print("Saldo Insuficiente!")
-        
 
     def deposita(self, valor):
         self.__saldo += valor
