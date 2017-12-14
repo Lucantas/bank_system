@@ -11,20 +11,14 @@ class Conta:
 
 
     """
-
-
     def __init__(self, numero, saldo, titular, limite):
         self._numero = numero
         self._saldo = saldo
         self._titular = Cliente(titular)
         self._limite = limite
 
-    @property
-    def saldo_absoluto(self):
-        return self._saldo + self._limite
-        
     def saca(self,valor):
-        pass
+        raise NotImplementedError
 
     def deposita(self, valor):
         self._saldo += valor
