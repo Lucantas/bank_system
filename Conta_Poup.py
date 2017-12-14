@@ -1,6 +1,16 @@
 from Conta import Conta
 
 class Conta_Poup(Conta):
+    """
+    This kind of Conta should:
+
+    - pay for each saca it uses
+
+    - have a limit of transfering 500 a day
+
+
+
+    """
 
     def __init__(self, numero, saldo, titular, limite):
         super().__init__(numero, saldo, titular, limite)

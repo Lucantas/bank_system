@@ -1,6 +1,18 @@
 from Cliente import Cliente
 
 class Conta:
+    """
+    Class Conta, is a bank account, if you remember not to touch in
+    the instance properties without calling it methods, you should be good!
+
+    Remember to implement the validation of methods saca and transfere,
+    because each child of Conta will have it's own way to deal with the
+    transations
+
+
+    """
+
+
     def __init__(self, numero, saldo, titular, limite):
         self._numero = numero
         self._saldo = saldo
@@ -12,10 +24,7 @@ class Conta:
         return self._saldo + self._limite
         
     def saca(self,valor):
-        if(self.saldo >= valor):
-            self._saldo -= valor
-        else:
-            print("Saldo Insuficiente!")
+        pass
 
     def deposita(self, valor):
         self._saldo += valor
@@ -25,7 +34,8 @@ class Conta:
             destino.deposita(valor)
 
     def extrato(self):
-        print("Olá sr.(a) {}, o seu saldo atual é: R$ {}".format(self.titular, self.saldo))
+        print("Olá sr.(a) {}, o seu saldo atual é: R$ {}"
+        .format(self.titular, self.saldo))
     
     def historico(self):
         #Method to show accounts history, to be implemented
