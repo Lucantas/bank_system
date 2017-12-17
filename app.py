@@ -22,22 +22,34 @@ limite == limit
 from Conta import Conta
 from Conta_Poup import Conta_Poup
 from Conta_Corr import Conta_Corr
+from Cliente import Cliente
 
-contas = []
+clientes = []
 
-def cria_conta(Conta, contas):
-    def agrupa_contas(Conta, contas):
-        contas.append(Conta)
+clientes.append(Cliente("lucas"))
+clientes.append(Cliente("23123"))
+clientes.append(Cliente("2j"))
 
-    agrupa_contas(Conta, contas)
+print(clientes[1].nome)
 
-cria_conta(Conta_Corr(1,50,"Lucas",100), contas)
-cria_conta(Conta_Poup(2,2000, "Monique",5000), contas)
 
-contas[0].transfere(100,contas[1])
 
-contas[0].extrato()
-contas[1].extrato()
+##contas = []
+
+#def cria_conta(Conta, contas):
+ #   def agrupa_contas(Conta, contas):
+        #contas.append(Conta)
+
+  #  agrupa_contas(Conta, contas)
+
+#cria_conta(Conta_Corr(1,50,"Lucas",100), contas)
+#cria_conta(Conta_Poup(2,2000, "Monique",5000), contas)
+
+#contas[0].transfere(100,contas[1])
+
+##contas[0].extrato()
+#contas[1].extrato()
+
 
 
 

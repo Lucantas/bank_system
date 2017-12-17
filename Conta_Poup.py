@@ -8,8 +8,6 @@ class Conta_Poup(Conta):
 
     - have a limit of transfering 500 a day
 
-
-
     """
 
     def __init__(self, numero, saldo, titular, limite):
